@@ -1,0 +1,17 @@
+name: rlm
+version: 1.0.0
+description: Recursive Language Model workflow for processing large contexts beyond context window limits.
+author: Brainqub3 (Original) / Converted for skillz
+
+tools_required:
+  - python3
+  - file_io
+
+agents:
+  - name: sub_llm
+    role: "Sub-LLM for chunk analysis"
+    model: "gemini-1.5-flash" # Or the specific sub-model you prefer
+
+environment:
+  state_dir: "./skillz/rlm/state"
+  script_dir: "./skillz/rlm/scripts"
