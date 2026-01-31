@@ -1,3 +1,8 @@
+---
+name: RLM
+description: Run a Recursive Language Model-style loop for long-context tasks. Uses a persistent local Python REPL and a sub-agent (llm_query) to process documents that exceed typical context window limits.
+---
+
 # RLM (Recursive Language Model) Workflow
 
 **Description:** Run a Recursive Language Model-style loop for long-context tasks. Uses a persistent local Python REPL and a sub-agent (llm_query) to process documents that exceed typical context window limits.
