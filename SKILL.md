@@ -29,14 +29,14 @@ To trigger this skill, provide a query related to a large document.
 ### 1. Initialize the REPL
 Run the Python script to load the context file into the persistent state.
 ```bash
-python3 rlm/scripts/rlm_repl.py init <context_file>
-python3 rlm/scripts/rlm_repl.py status
+python3 .gemini/skills/RLM/scripts/rlm-repl.py init <context_file>
+python3 .gemini/skills/RLM/scripts/rlm-repl.py status
 ```
 
 ### 2. Scout the Context
 Quickly inspect the beginning and end of the file to understand its structure.
 ```bash
-python3 rlm/scripts/rlm_llm/scripts/rlm_repl.py exec -c "print(peek(0, 3000))"
+python3 .gemini/skills/RLM/scripts/rlm-repl.py exec -c "print(peek(0, 3000))"
 ```
 
 ### 3. Chunking Strategy
@@ -46,7 +46,7 @@ python3 rlm/scripts/rlm_llm/scripts/rlm_repl.py exec -c "print(peek(0, 3000))"
 ### 4. Materialize Chunks
 Split the content into chunk files for parallel/serial processing.
 ```bash
-python3 rlm/scripts/rlm_repl.py exec -c "paths = write_chunks('state/chunks', size=200000, overlap=0); print(len(paths))"
+python3 .gemini/skills/RLM/scripts/rlm-repl.py exec -c "paths = write_chunks('state/chunks', size=200000, overlap=0); print(len(paths))"
 ```
 
 ### 5. Sub-Agent Loop (llm_query)
@@ -63,6 +63,6 @@ This skill requires:
 - **Execution:** To run the Python REPL script.
 
 ## Notes
-- Ensure `rlm_repl.py` is executable (`chmod +x ...`).
+- Ensure `rlm_repl.py` is executable.
 - State is stored in `state/` by default (relative to where the script runs).
 ```

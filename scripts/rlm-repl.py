@@ -47,7 +47,7 @@ from pathlib import Path
 from typing import Any, Dict, List, Tuple
 
 
-DEFAULT_STATE_PATH = Path("rlm/state/state.pkl")
+DEFAULT_STATE_PATH = Path("skillz/rlm/state/state.pkl")
 DEFAULT_MAX_OUTPUT_CHARS = 8000
 
 
